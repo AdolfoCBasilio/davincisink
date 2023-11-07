@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aplica el modelo de caja flexible */
+  flex-direction: column; /* Alinea los elementos en una columna */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  /* border: 2px solid rgb(25, 0, 255); */
+  height: 100vh;
+  /* min-height: 100vh; */
+  /* box-sizing: content-box; */
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
