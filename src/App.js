@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import logo from './images/logoVertical.png'
-import davinciLogo from './images/Group 74.svg'
-import whatsappLogo from './images/icons8-whatsapp (1).svg'
-import facebookLogo from './images/icons8-facebook.svg'
-import instagramLogo from './images/icons8-instagram.svg'
-import tiktokLogo from './images/icons8-tiktok (1).svg'
-import pinterestLogo from './images/icons8-pinterest.svg'
-import './App.css'
-import { Enlace } from "./components/Enlace";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+//assets
+import logo from "./images/logoVertical.png";
+
+//Components
 import ProgressBar from "./components/ProgressBar/ProgressBar";
+import { Home } from "./pages/Home/Home";
+import Contact from "./pages/contact/Contact";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
+  // const [linksVisible, setLinksVisible] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,33 +20,44 @@ function App() {
     }, 2000);
   }, []);
 
+  // const handleLinkClick = () => {
+  //   setLinksVisible(false);
+  // };
+
   if (loading) {
     return (
-      <div className="container-loading" >
+      <div className="container-loading">
         <div className="container-logo">
           <img className="logo-style" src={logo} alt="Da Vinci's Ink Logo" />
         </div>
-        <ProgressBar/>
+        <ProgressBar />
       </div>
     );
   }
 
   return (
-    <div className="container">
+    <div>
 
-      <div style={{display:'flex',flexDirection:'column',justifyContent:'center', alignItems:'center'}}>
-        <h1>Da Vinci's Ink</h1>
-        <ul>
-          <Enlace url="https://walink.co/85f91a"texto="WhatsApp" imagenUrl={whatsappLogo}/>
-          <Enlace url="https://www.instagram.com/adolfocbg/"texto="Instagram" imagenUrl={instagramLogo}/>
-          <Enlace url="https://www.facebook.com/AdolfoC.BasilioGeniz"texto="Facebook" imagenUrl={facebookLogo}/>
-          <Enlace url="https://www.tiktok.com/@adolfocbasilio"texto="TikTok" imagenUrl={tiktokLogo}/>
-          <Enlace url="#"texto="Da Vinci´s Ink" imagenUrl={davinciLogo}/>
-          <Enlace url="https://www.pinterest.com.mx" texto="Busca diseños aqui" imagenUrl={pinterestLogo} />
-        </ul>
-      </div>
+      <Contact />
 
-      <div style={{ background: '#FEB801', height: '2vh', width: '100%' }}></div>
+      <Router>
+        {/* {linksVisible(true)} */}
+        {/* {linksVisible && (
+        <div>
+        <Link to="/home" onClick={handleLinkClick}>
+        Home Link
+        </Link>
+        <br />
+        <Link to="/about" onClick={handleLinkClick}>
+        About Link
+        </Link>
+        </div>
+      )} */}
+        <Routes>
+          {/* <Route path="/home" element={<Home />} /> */}
+          <Route path="/home" element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
