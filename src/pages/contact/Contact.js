@@ -20,12 +20,12 @@ const Contact = () => {
           <Enlace url="https://walink.co/85f91a" texto="WhatsApp" imagenUrl={whatsappLogo} />
           <Enlace url="https://www.facebook.com/profile.php?id=61553589208270" texto="Facebook" imagenUrl={facebookLogo} />
           <Enlace url="https://www.instagram.com/da_vincis_ink/" texto="Instagram" imagenUrl={instagramLogo} />
+          <Enlace url="https://www.pinterest.com.mx" texto="Busca diseños aqui" imagenUrl={pinterestLogo} />
           {/* <Enlace url="https://www.instagram.com/adolfocbg/" texto="Instagram" imagenUrl={instagramLogo} /> */}
           {/* <Enlace url="https://www.facebook.com/AdolfoC.BasilioGeniz" texto="Facebook" imagenUrl={facebookLogo} /> */}
           {/* <Enlace url="https://www.tiktok.com/@adolfocbasilio" texto="TikTok" imagenUrl={tiktokLogo} /> */}
           {/* <Enlace url="https://www.tiktok.com/@adolfocbasilio" texto="TikTok" imagenUrl={tiktokLogo} /> */}
           {/* <Enlace url="/home" texto="Da Vinci´s Ink" imagenUrl={davinciLogo} /> */}
-          <Enlace url="https://www.pinterest.com.mx" texto="Busca diseños aqui" imagenUrl={pinterestLogo} />
         </ul>
       </div>
 
